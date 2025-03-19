@@ -142,17 +142,17 @@
 
     .navbar ul {
         position: absolute;
-        top: 60px; /* Below navbar */
+        top: 40px; 
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-        /* opacity: 0;
-        visibility: hidden; */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
         display: none;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        background: white;
+        /* background: linear-gradient(to top, rgb(186, 186, 236) 2%, white 35%, white 65%, rgb(186, 186, 236) 98%); */
     }
 
     /* Show menu when active */
@@ -161,13 +161,30 @@
     }
 
     .navbar ul li {
-        margin: 10px 0;
+        width: 100%; /* Make each menu item full width */
+        height: auto; /* Allow auto height based on content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        padding-left: 40px; /* Remove extra padding */
+        padding-right: 40px;
+        margin: 1px; /* Remove any gaps */
+        border-radius: 5px;
+        background: linear-gradient(to top, rgb(186, 186, 236) 2%, white 35%, white 65%, rgb(186, 186, 236) 98%);
     }
+
+    .navbar ul li a {
+        width: 100%; /* Make the link take full width */
+        height: 100%; /* Ensure full height coverage */
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    
 }
-
-
-
 
 @keyframes fadeIn {
     from {
